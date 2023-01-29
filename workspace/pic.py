@@ -2,6 +2,7 @@ import os
 import cv2
 import numpy as np
 from sklearn.svm import SVC
+import flask
 
 # 渡された複数のサンプル画像を読み込む
 samples = []
