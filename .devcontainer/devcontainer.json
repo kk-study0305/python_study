@@ -1,0 +1,23 @@
+{
+    // dev container名
+    "name": "python",
+    // 今回は docker-compose.ymlを利用する。全リポジトリ共通にしてます。
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {}
+    },
+    // コンテナ内のユーザー
+    "remoteUser": "root",
+    // コンテナ内に入れる拡張機能
+    "extensions": [],
+
+    // コンテナ内に入れる環境変数
+    "containerEnv": {
+        "TZ": "Azia/Tokyo",
+        "LANG": "ja_JP.utf8"
+    },
+
+    // コンテナ起動後に実行するコマンド
+    // .devcontainer/ 内のシェルスクリプトでもよい。
+    "postCreateCommand": [],
+}

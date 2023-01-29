@@ -1,0 +1,5 @@
+your_hight = input('あなたの身長(m)を入力してください')
+your_wight = input('あなたの体重(kg)を入力してください')
+your_bmi = float(your_wight) / (float(your_hight) * float(your_hight))
+your_bmi = round(your_bmi,3)
+print(f'あなたのBMIは{your_bmi}です。')
