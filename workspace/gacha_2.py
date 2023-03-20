@@ -2,7 +2,7 @@ import random
 import time
 
 gacha_list = []
-gacha_number = 25
+gacha_number = 100
 try_number = 0
 
 # ガチャの大本の生成
@@ -20,9 +20,14 @@ while complate_check == False:
     x = random.randint(0, gacha_number - 1)
     print(f'You {x} get!')
     my_item_list[x] += 1
+    if try_number % 2 == 0:
+        y = random.randint(0, gacha_number - 1)
+        if my_item_list[y] > 0:
+            my_item_list[y] -= 1
+            print(f'You {y} lost!')
+    print(my_item_list)
     if all(my_item_list):
         complate_check = True
-    print(my_item_list)
 
 print(f'コンプまで{try_number}回')
 print(f'最大{max(my_item_list)}個')

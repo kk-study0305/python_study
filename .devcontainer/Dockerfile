@@ -11,7 +11,8 @@ ENV LC_ALL ja_JP.UTF-8
 RUN apt-get install -y vim less
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
-RUN pip install flask
+RUN pip install flask pymunk pygame
+
 
 RUN mkdir .ssh
 COPY --chmod=600 id_rsa /root/.ssh/id_rsa
